@@ -7,8 +7,8 @@ grep_result_length=`ps aux | grep jupyter-lab | wc -l`
 if test $grep_result_length -eq 1; then
     # jupyter labの実行
     echo 'running...'
-    cd $HOME/notebook; nohup jupyter lab >> jupyter.log 2>&1 &
-    # cd ~/; nohup jupyter lab --ip=0.0.0.0 --no-browser >> jupyter.log 2>&1 &
+    cd $HOME/notebook; nohup jupyter lab >> jupyterlab.log 2>&1 &
+    # cd ~/; nohup jupyter lab --ip=0.0.0.0 --no-browser >> jupyterlab.log 2>&1 &
 elif test $grep_result_length -eq 2; then
     # (たぶん)起動中
     echo 'already running'
